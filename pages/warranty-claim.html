@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Form Klaim Garansi Produk Sena">
+    <link rel="shortcut icon" href="../assets/images/common/favicon.svg">
+    <link rel="icon" href="../assets/images/common/favicon-152.svg" sizes="152x152">
+    <title>Klaim Garansi - SENA</title>
+
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/style-dev.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/form.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <script src="../assets/js/jquery.min.js"></script>
+</head>
+
+<body class="page-warranty">
+    <div id="page" class="site">
+        <header id="act_header">
+            <div class="headerArea">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="../index.html">
+                            <img src="../assets/images/common/img_logo_red.svg" alt="SENA">
+                            <img src="../assets/images/common/img_logo_white.svg" alt="SENA">
+                        </a>
+                    </h1>
+                    <div class="nav">
+                        <ul class="navbar">
+                            <li class="gnb-one-depth menu-item"><a href="wave-intercom.html">WAVE INTERCOM</a></li>
+                            <li class="gnb-three-depth menu-item menu-item-has-children"><a href="#">Motorcycling</a>
+                            </li>
+                            <li class="gnb-three-depth menu-item menu-item-has-children"><a href="#">Cycling</a></li>
+                            <li class="gnb-one-depth menu-item"><a href="news.html">Stories</a></li>
+                            <li class="gnb-one-depth menu-item"><a href="collaborations.html">Kolaborasi</a></li>
+                        </ul>
+                    </div>
+                    <ul class="util">
+                        <li class="store">
+                            <a href="https://store-us.sena.com" class="btn_store" target="_blank">
+                                <span class="ico">TOKO</span>
+                            </a>
+                        </li>
+                        <li class="support">
+                            <a href="support.html">DUKUNGAN</a>
+                        </li>
+                        <li class="cart">
+                            <a href="checkout.html" class="btn_cart"
+                                style="display: flex; align-items: center; gap: 6px; color: #000;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9 2L7.17 4H3C2.45 4 2 4.45 2 5C2 5.55 2.45 6 3 6H4.31L6.6 13.59C7.09 15.29 8.67 16.5 10.44 16.5H18.55C20.35 16.5 21.94 15.26 22.41 13.53L23.54 8.93C23.77 8.03 23.12 7.12 22.17 7H6.54L6.42 6.57L5.91 5H19C19.55 5 20 4.55 20 4C20 3.45 19.55 3 19 3H8.29L9 2ZM7 18C5.9 18 5 18.9 5 20C5 21.1 5.9 22 7 22C8.1 22 9 21.1 9 20C9 18.9 8.1 18 7 18ZM17 18C15.9 18 15 18.9 15 20C15 21.1 15.9 22 17 22C18.1 22 19 21.1 19 20C19 18.9 18.1 18 17 18Z"
+                                        fill="currentColor" />
+                                </svg>
+                                <span class="cart_badge"
+                                    style="background: #B32D26; color: #fff; font-size: 1.1rem; padding: 2px 8px; border-radius: 12px; line-height: 1;">0</span>
+                            </a>
+                        </li>
+                        <li class="login" style="margin-left: 1.6rem;">
+                            <a href="login.html" class="btn_login"
+                                style="display: flex; align-items: center; color: #000;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="site-content-container">
+            <section class="checkout_section">
+                <div class="checkout_container" style="max-width: 100%;">
+                    <div class="checkout_main">
+                        <div class="auth_header" style="text-align: left; margin-bottom: 3.2rem;">
+                            <h2 style="font-size: 3.2rem;">FORM KLAIM GARANSI</h2>
+                            <p>Lengkapi formulir di bawah ini untuk mengajukan klaim garansi produk Sena Anda</p>
+                        </div>
+
+                        <form id="warrantyForm">
+                            <h3 class="section_title">INFORMASI KONTAK</h3>
+
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label for="firstName">Nama Depan <em>*</em></label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form_group">
+                                    <label for="lastName">Nama Belakang <em>*</em></label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label for="email">Email <em>*</em></label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form_group">
+                                    <label for="phone">Nomor Telepon <em>*</em></label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+
+                            <h3 class="section_title" style="margin-top: 3.2rem;">INFORMASI PRODUK</h3>
+
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label for="productName">Nama Produk <em>*</em></label>
+                                    <select id="productName" name="productName" required>
+                                        <option value="">Pilih Produk</option>
+                                        <option value="60s">Sena 60S</option>
+                                        <option value="50s">Sena 50S</option>
+                                        <option value="phantom">Phantom</option>
+                                        <option value="stryker">Stryker</option>
+                                        <option value="outrush2">Outrush 2</option>
+                                        <option value="outstar2">Outstar 2</option>
+                                        <option value="bikom20">BiKom 20</option>
+                                        <option value="other">Lainnya</option>
+                                    </select>
+                                </div>
+                                <div class="form_group">
+                                    <label for="serialNumber">Nomor Seri Produk <em>*</em></label>
+                                    <input type="text" id="serialNumber" name="serialNumber"
+                                        placeholder="Contoh: SN123456789" required>
+                                </div>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label for="purchaseDate">Tanggal Pembelian <em>*</em></label>
+                                    <input type="date" id="purchaseDate" name="purchaseDate" required>
+                                </div>
+                                <div class="form_group">
+                                    <label for="purchasePlace">Tempat Pembelian <em>*</em></label>
+                                    <input type="text" id="purchasePlace" name="purchasePlace"
+                                        placeholder="Nama toko atau website" required>
+                                </div>
+                            </div>
+
+                            <h3 class="section_title" style="margin-top: 3.2rem;">DETAIL MASALAH</h3>
+
+                            <div class="form_group">
+                                <label for="issueType">Jenis Masalah <em>*</em></label>
+                                <select id="issueType" name="issueType" required>
+                                    <option value="">Pilih Jenis Masalah</option>
+                                    <option value="audio">Masalah Audio</option>
+                                    <option value="bluetooth">Masalah Bluetooth/Konektivitas</option>
+                                    <option value="battery">Masalah Baterai</option>
+                                    <option value="hardware">Kerusakan Hardware/Fisik</option>
+                                    <option value="software">Masalah Software/Firmware</option>
+                                    <option value="charging">Masalah Pengisian Daya</option>
+                                    <option value="other">Lainnya</option>
+                                </select>
+                            </div>
+
+                            <div class="form_group">
+                                <label for="issueDescription">Deskripsi Masalah <em>*</em></label>
+                                <textarea id="issueDescription" name="issueDescription" rows="5"
+                                    placeholder="Jelaskan masalah yang Anda alami secara detail..." required></textarea>
+                            </div>
+
+                            <h3 class="section_title" style="margin-top: 3.2rem;">UPLOAD DOKUMEN</h3>
+
+                            <div class="form_group">
+                                <label>Bukti Pembelian (Invoice/Struk) <em>*</em></label>
+                                <div class="upload_area" onclick="document.getElementById('purchaseProof').click()">
+                                    <div class="upload_icon">📄</div>
+                                    <div class="upload_text">Klik untuk upload bukti pembelian</div>
+                                    <div class="upload_hint">Format: PDF, JPG, PNG (Max: 5MB)</div>
+                                    <input type="file" id="purchaseProof" name="purchaseProof"
+                                        accept=".pdf,.jpg,.jpeg,.png" style="display: none;">
+                                </div>
+                            </div>
+
+                            <div class="form_group">
+                                <label>Foto Produk/Masalah (Opsional)</label>
+                                <div class="upload_area" onclick="document.getElementById('productPhoto').click()">
+                                    <div class="upload_icon">📷</div>
+                                    <div class="upload_text">Klik untuk upload foto produk</div>
+                                    <div class="upload_hint">Format: JPG, PNG (Max: 5MB)</div>
+                                    <input type="file" id="productPhoto" name="productPhoto" accept=".jpg,.jpeg,.png"
+                                        multiple style="display: none;">
+                                </div>
+                            </div>
+
+                            <div class="form_checkbox" style="margin-top: 2.4rem;">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">
+                                    Saya menyatakan bahwa semua informasi yang saya berikan adalah benar dan akurat.
+                                    Saya memahami bahwa klaim garansi akan diproses sesuai dengan <a href="#"
+                                        target="_blank">Syarat & Ketentuan Garansi Sena</a>.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn_submit" style="margin-top: 3.2rem;">
+                                KIRIM KLAIM GARANSI
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div class="inner top">
+                <div class="left">
+                    <div class="sns">
+                        <a href="https://twitter.com/senabluetooth" class="twitter" target="_blank">twitter</a>
+                        <a href="https://www.instagram.com/senabluetooth/" class="instagram"
+                            target="_blank">instagram</a>
+                        <a href="https://www.facebook.com/SenaBluetooth" class="facebook" target="_blank">facebook</a>
+                        <a href="https://www.youtube.com/senabluetooth" class="youtube" target="_blank">youtube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="inner bottom">
+                <div class="left">
+                    <p class="copyright">&copy; 2026 Sena Technologies, Inc. Hak cipta dilindungi</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script>
+        // File upload handlers
+        document.getElementById('purchaseProof').addEventListener('change', function (e) {
+            if (e.target.files.length > 0) {
+                const fileName = e.target.files[0].name;
+                e.target.parentElement.querySelector('.upload_text').textContent = fileName;
+            }
+        });
+
+        document.getElementById('productPhoto').addEventListener('change', function (e) {
+            if (e.target.files.length > 0) {
+                const count = e.target.files.length;
+                e.target.parentElement.querySelector('.upload_text').textContent = count + ' file dipilih';
+            }
+        });
+
+        document.getElementById('warrantyForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Terima kasih! Klaim garansi Anda telah dikirim. Tim kami akan menghubungi Anda dalam 1-2 hari kerja. (Demo)');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Tracking Masa Garansi Produk Sena">
+    <link rel="shortcut icon" href="../assets/images/common/favicon.svg">
+    <link rel="icon" href="../assets/images/common/favicon-152.svg" sizes="152x152">
+    <title>Tracking Garansi - SENA</title>
+
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/style-dev.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/form.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <script src="../assets/js/jquery.min.js"></script>
+
+    <style>
+        .warranty_tracking_section {
+            padding: 12rem 2rem 8rem;
+            background: #F9F9F9;
+            min-height: calc(100vh - 200px);
+        }
+
+        .tracking_container {
+            max-width: 80rem;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid #D9D9D9;
+            padding: 4rem;
+        }
+
+        .tracking_header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .tracking_header h2 {
+            font-size: 3.2rem;
+            margin-bottom: 1.6rem;
+            font-family: "Red Hat Display", sans-serif;
+        }
+
+        .tracking_header p {
+            font-size: 1.6rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .tracking_search {
+            display: flex;
+            gap: 1.6rem;
+            margin-bottom: 4rem;
+        }
+
+        .tracking_search input {
+            flex: 1;
+        }
+
+        /* Result Area */
+        .tracking_result {
+            display: none;
+            border-top: 1px solid #D9D9D9;
+            padding-top: 4rem;
+        }
+
+        .tracking_result.active {
+            display: block;
+        }
+
+        .product_info_card {
+            display: flex;
+            gap: 2.4rem;
+            padding: 2.4rem;
+            background: #F3F3F3;
+            margin-bottom: 4rem;
+            align-items: center;
+        }
+
+        .product_info_card img {
+            width: 12rem;
+            height: auto;
+            mix-blend-mode: darken;
+        }
+
+        .product_details h3 {
+            font-size: 2.4rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .product_details p {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 0.4rem;
+        }
+
+        .status_badge {
+            display: inline-block;
+            padding: 0.4rem 1.2rem;
+            background: #d4edda;
+            color: #155724;
+            font-weight: 700;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            border-radius: 2rem;
+            margin-top: 1.2rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.7rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #D9D9D9;
+        }
+
+        .timeline_item {
+            position: relative;
+            padding-bottom: 3.2rem;
+        }
+
+        .timeline_item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline_icon {
+            position: absolute;
+            left: -3rem;
+            top: 0;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            background: #D9D9D9;
+            border: 3px solid #fff;
+        }
+
+        .timeline_item.active .timeline_icon {
+            background: #B32D26;
+            /* Sena red */
+            box-shadow: 0 0 0 3px rgba(179, 45, 38, 0.2);
+        }
+
+        .timeline_item.active~.timeline_item .timeline_icon {
+            background: #D9D9D9;
+        }
+
+        /* Ensures past items appear active too usually, but for simple we just colour them red */
+        .timeline_item.completed .timeline_icon {
+            background: #B32D26;
+        }
+
+        .timeline_content h4 {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+            color: #000;
+        }
+
+        .timeline_content p {
+            font-size: 1.4rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .timeline_date {
+            font-size: 1.3rem;
+            color: #999;
+            margin-top: 0.4rem;
+            display: block;
+        }
+
+        @media (max-width: 767px) {
+            .tracking_search {
+                flex-direction: column;
+            }
+
+            .tracking_container {
+                padding: 2.4rem;
+            }
+
+            .product_info_card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Fix cart and login alignment in header */
+        .btn_cart {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .btn_login {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .cart_badge {
+            background: #B32D26;
+            color: #fff;
+            font-size: 1rem;
+            padding: 2px 6px;
+            border-radius: 10px;
+            line-height: 1;
+        }
+    </style>
+</head>
+
+<body class="page-warranty-tracking">
+    <div id="page" class="site">
+        <header id="act_header">
+            <div class="headerArea">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="../index.html">
+                            <img src="../assets/images/common/img_logo_red.svg" alt="SENA">
+                            <img src="../assets/images/common/img_logo_white.svg" alt="SENA">
+                        </a>
+                    </h1>
+                    <div class="nav">
+                        <ul class="navbar">
+                            <li class="gnb-one-depth menu-item"><a href="wave-intercom.html">WAVE INTERCOM</a></li>
+                            <li class="gnb-three-depth menu-item menu-item-has-children"><a href="#">Motorcycling</a>
+                            </li>
+                            <li class="gnb-three-depth menu-item menu-item-has-children"><a href="#">Cycling</a></li>
+                            <li class="gnb-one-depth menu-item"><a href="news.html">Stories</a></li>
+                            <li class="gnb-one-depth menu-item"><a href="collaborations.html">Kolaborasi</a></li>
+                        </ul>
+                    </div>
+                    <ul class="util">
+                        <li class="store">
+                            <a href="https://store-us.sena.com" class="btn_store" target="_blank">
+                                <span class="ico">TOKO</span>
+                            </a>
+                        </li>
+                        <li class="support">
+                            <a href="support.html">DUKUNGAN</a>
+                        </li>
+                        <li class="cart">
+                            <a href="checkout.html" class="btn_cart"
+                                style="display: flex; align-items: center; gap: 6px; color: #000;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9 2L7.17 4H3C2.45 4 2 4.45 2 5C2 5.55 2.45 6 3 6H4.31L6.6 13.59C7.09 15.29 8.67 16.5 10.44 16.5H18.55C20.35 16.5 21.94 15.26 22.41 13.53L23.54 8.93C23.77 8.03 23.12 7.12 22.17 7H6.54L6.42 6.57L5.91 5H19C19.55 5 20 4.55 20 4C20 3.45 19.55 3 19 3H8.29L9 2ZM7 18C5.9 18 5 18.9 5 20C5 21.1 5.9 22 7 22C8.1 22 9 21.1 9 20C9 18.9 8.1 18 7 18ZM17 18C15.9 18 15 18.9 15 20C15 21.1 15.9 22 17 22C18.1 22 19 21.1 19 20C19 18.9 18.1 18 17 18Z"
+                                        fill="currentColor" />
+                                </svg>
+                                <span class="cart_badge"
+                                    style="background: #B32D26; color: #fff; font-size: 1.1rem; padding: 2px 8px; border-radius: 12px; line-height: 1;">0</span>
+                            </a>
+                        </li>
+                        <li class="login" style="margin-left: 1.6rem;">
+                            <a href="login.html" class="btn_login"
+                                style="display: flex; align-items: center; color: #000;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="site-content-container">
+            <section class="warranty_tracking_section">
+                <div class="tracking_container">
+                    <div class="tracking_header">
+                        <h2>CEK MASA GARANSI</h2>
+                        <p>Masukkan Nomor Seri Produk atau ID Pesanan Anda untuk memeriksa status garansi dan proses
+                            klaim Anda.</p>
+                    </div>
+
+                    <form id="trackingForm"
+                        onsubmit="event.preventDefault(); document.getElementById('trackingResult').classList.add('active');">
+                        <div class="tracking_search">
+                            <input type="text" id="serialNumber" placeholder="Contoh: SN123456789 atau #ORD-2024-001"
+                                required>
+                            <button type="submit" class="btn_black large">
+                                <span class="arrow">CEK STATUS</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="trackingResult" class="tracking_result">
+                        <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 2.4rem;">Hasil Pencarian</h3>
+
+                        <div class="product_info_card">
+                            <!-- Placeholder image, using 60s -->
+                            <img src="../assets/images/common/favicon-152.svg" alt="Sena Product"
+                                style="width: 80px; height: 80px; object-fit: contain;">
+                            <div class="product_details">
+                                <h3>Sena 60S</h3>
+                                <p><strong>S/N:</strong> SN123456789</p>
+                                <p><strong>Tanggal Pembelian:</strong> 15 Januari 2024</p>
+                                <span class="status_badge">Garansi Aktif (Sisa 11 Bulan)</span>
+                            </div>
+                        </div>
+
+                        <h4 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 2.4rem;">Riwayat Garansi / Klaim
+                        </h4>
+                        <div class="timeline">
+                            <div class="timeline_item completed">
+                                <div class="timeline_icon"></div>
+                                <div class="timeline_content">
+                                    <h4>Produk Terdaftar</h4>
+                                    <p>Produk berhasil didaftarkan ke dalam sistem garansi SENA.</p>
+                                    <span class="timeline_date">16 Jan 2024, 10:30 WIB</span>
+                                </div>
+                            </div>
+                            <div class="timeline_item completed">
+                                <div class="timeline_content">
+                                    <h4>Pembelian Produk</h4>
+                                    <p>Pembelian dari Authorized Dealer SENA Indonesia.</p>
+                                    <span class="timeline_date">15 Jan 2024, 14:15 WIB</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div class="inner top">
+                <div class="left">
+                    <div class="sns">
+                        <a href="https://twitter.com/senabluetooth" class="twitter" target="_blank">twitter</a>
+                        <a href="https://www.instagram.com/senabluetooth/" class="instagram"
+                            target="_blank">instagram</a>
+                        <a href="https://www.facebook.com/SenaBluetooth" class="facebook" target="_blank">facebook</a>
+                        <a href="https://www.youtube.com/senabluetooth" class="youtube" target="_blank">youtube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="inner bottom">
+                <div class="left">
+                    <p class="copyright">&copy; 2026 Sena Technologies, Inc. Hak cipta dilindungi</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+
+</html>

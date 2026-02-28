@@ -1,0 +1,678 @@
+"/* Member Area Styles */
+.member_area {
+    background: #F9F9F9;
+    min-height: 100vh;
+    padding: 12rem 0 8rem;
+}
+
+.member_container {
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.member_grid {
+    display: grid;
+    grid-template-columns: 30rem 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Sidebar Navigation */
+.member_sidebar {
+    background: #fff;
+    border: 1px solid #D9D9D9;
+    border-radius: 0;
+    position: sticky;
+    top: 12rem;
+}
+
+.member_profile {
+    padding: 3rem 2.4rem;
+    text-align: center;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.member_avatar {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E30613 0%, #c0050f 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.6rem;
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.member_name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.4rem;
+    font-family: \"Red Hat Display\";
+}
+
+.member_email {
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.member_nav {
+    padding: 2.4rem 0;
+}
+
+.member_nav_item {
+    display: flex;
+    align-items: center;
+    padding: 1.6rem 2.4rem;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    border-left: 3px solid transparent;
+}
+
+.member_nav_item:hover,
+.member_nav_item.active {
+    background: #FFF5F5;
+    color: #E30613;
+    border-left-color: #E30613;
+}
+
+.member_nav_item svg {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1.2rem;
+}
+
+.member_nav_item.logout {
+    color: #999;
+}
+
+.member_nav_item.logout:hover {
+    color: #E30613;
+    background: #FFF5F5;
+}
+
+/* Main Content */
+.member_content {
+    background: #fff;
+    border: 1px solid #D9D9D9;
+    padding: 4rem;
+}
+
+.member_header {
+    margin-bottom: 3.2rem;
+    padding-bottom: 2.4rem;
+    border-bottom: 2px solid #E30613;
+}
+
+.member_header h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+    font-family: \"Red Hat Display\";
+    margin-bottom: 0.8rem;
+}
+
+.member_header p {
+    font-size: 1.6rem;
+    color: #666;
+}
+
+/* Dashboard Stats */
+.dashboard_stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2.4rem;
+    margin-bottom: 4rem;
+}
+
+.stat_card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 1px solid #D9D9D9;
+    padding: 2.4rem;
+    border-radius: 0;
+    transition: transform 0.3s;
+}
+
+.stat_card:hover {
+    transform: translateY(-5px);
+}
+
+.stat_card.primary {
+    background: linear-gradient(135deg, #E30613 0%, #c0050f 100%);
+    color: #fff;
+}
+
+.stat_icon {
+    font-size: 3.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.stat_value {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    font-family: \"Red Hat Display\";
+}
+
+.stat_card.primary .stat_value {
+    color: #fff;
+}
+
+.stat_label {
+    font-size: 1.4rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.stat_card.primary .stat_label {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Orders Table */
+.orders_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2.4rem;
+}
+
+.orders_table thead {
+    background: #F3F3F3;
+}
+
+.orders_table th {
+    padding: 1.6rem;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    border-bottom: 2px solid #D9D9D9;
+}
+
+.orders_table td {
+    padding: 1.6rem;
+    font-size: 1.5rem;
+    color: #333;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.orders_table tbody tr:hover {
+    background: #F9F9F9;
+}
+
+.order_id {
+    font-weight: 600;
+    color: #E30613;
+}
+
+.order_status {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.order_status.completed {
+    background: #d4edda;
+    color: #155724;
+}
+
+.order_status.processing {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.order_status.pending {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.order_status.shipped {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.btn_view {
+    background: #E30613;
+    color: #fff;
+    padding: 0.8rem 1.6rem;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn_view:hover {
+    background: #c0050f;
+}
+
+/* Profile Form */
+.profile_form .form_group {
+    margin-bottom: 2.4rem;
+}
+
+.profile_avatar_section {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    margin-bottom: 3.2rem;
+    padding-bottom: 3.2rem;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.profile_avatar_large {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E30613 0%, #c0050f 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.profile_avatar_info h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.8rem;
+}
+
+.btn_change_photo {
+    background: #F3F3F3;
+    border: 1px solid #D9D9D9;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn_change_photo:hover {
+    background: #E30613;
+    color: #fff;
+    border-color: #E30613;
+}
+
+/* Address Cards */
+.address_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+    gap: 2.4rem;
+    margin-top: 2.4rem;
+}
+
+.address_card {
+    background: #F9F9F9;
+    border: 2px solid #D9D9D9;
+    padding: 2.4rem;
+    position: relative;
+}
+
+.address_card.default {
+    border-color: #E30613;
+}
+
+.address_badge {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    background: #E30613;
+    color: #fff;
+    padding: 0.4rem 1.2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.address_card h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1.2rem;
+}
+
+.address_card p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.address_actions {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1.6rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid #D9D9D9;
+}
+
+.btn_edit,
+.btn_delete {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn_edit {
+    background: #F3F3F3;
+    color: #000;
+    border: 1px solid #D9D9D9;
+}
+
+.btn_edit:hover {
+    background: #E30613;
+    color: #fff;
+    border-color: #E30613;
+}
+
+.btn_delete {
+    background: transparent;
+    color: #999;
+}
+
+.btn_delete:hover {
+    color: #E30613;
+}
+
+.btn_add_address {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: #E30613;
+    color: #fff;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 2.4rem;
+}
+
+.btn_add_address:hover {
+    background: #c0050f;
+}
+
+/* Wishlist Grid */
+.wishlist_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+    gap: 2.4rem;
+    margin-top: 2.4rem;
+}
+
+.wishlist_item {
+    background: #F9F9F9;
+    border: 1px solid #D9D9D9;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.wishlist_item:hover {
+    transform: translateY(-5px);
+}
+
+.wishlist_image {
+    width: 100%;
+    height: 28rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.wishlist_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn_remove_wishlist {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #999;
+    transition: all 0.3s;
+}
+
+.btn_remove_wishlist:hover {
+    background: #E30613;
+    color: #fff;
+}
+
+.wishlist_info {
+    padding: 2rem;
+}
+
+.wishlist_name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.8rem;
+}
+
+.wishlist_price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #E30613;
+    margin-bottom: 1.6rem;
+}
+
+.btn_add_cart {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-transform: uppercase;
+}
+
+.btn_add_cart:hover {
+    background: #E30613;
+}
+
+/* Empty State */
+.empty_state {
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.empty_icon {
+    font-size: 8rem;
+    margin-bottom: 2.4rem;
+    opacity: 0.3;
+}
+
+.empty_state h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1.2rem;
+}
+
+.empty_state p {
+    font-size: 1.6rem;
+    color: #666;
+    margin-bottom: 2.4rem;
+}
+
+/* User Dropdown in Header */
+.user_dropdown {
+    position: relative;
+}
+
+.user_dropdown_toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    padding: 0.8rem 1.6rem;
+    background: #F3F3F3;
+    border-radius: 50px;
+    transition: background 0.3s;
+}
+
+.user_dropdown_toggle:hover {
+    background: #E30613;
+    color: #fff;
+}
+
+.user_avatar_small {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    background: #E30613;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.user_dropdown_menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.8rem;
+    background: #fff;
+    border: 1px solid #D9D9D9;
+    min-width: 20rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.user_dropdown:hover .user_dropdown_menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.user_dropdown_menu a {
+    display: block;
+    padding: 1.2rem 2rem;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.user_dropdown_menu a:hover {
+    background: #FFF5F5;
+    color: #E30613;
+}
+
+.user_dropdown_menu a:last-child {
+    border-bottom: none;
+    color: #999;
+}
+
+.user_dropdown_menu a:last-child:hover {
+    color: #E30613;
+}
+
+/* Responsive */
+@media (max-width: 1279px) {
+    .member_grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .member_sidebar {
+        position: static;
+    }
+    
+    .member_nav {
+        display: flex;
+        overflow-x: auto;
+        padding: 0;
+    }
+    
+    .member_nav_item {
+        white-space: nowrap;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+    
+    .member_nav_item:hover,
+    .member_nav_item.active {
+        border-left: none;
+        border-bottom-color: #E30613;
+    }
+}
+
+@media (max-width: 767px) {
+    .member_area {
+        padding: 10rem 0 4rem;
+    }
+    
+    .member_content {
+        padding: 2.4rem;
+    }
+    
+    .member_header h2 {
+        font-size: 2.4rem;
+    }
+    
+    .dashboard_stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .orders_table {
+        font-size: 1.4rem;
+    }
+    
+    .orders_table th,
+    .orders_table td {
+        padding: 1rem;
+    }
+    
+    .address_grid,
+    .wishlist_grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile_avatar_section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+"

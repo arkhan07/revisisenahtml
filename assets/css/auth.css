@@ -1,0 +1,720 @@
+/* Auth Pages Styles */
+.auth_section {
+    padding: 12rem 0 8rem;
+    background: #fff;
+}
+
+.auth_container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.auth_box {
+    background: #fff;
+    border: 1px solid #D9D9D9;
+    padding: 4.8rem;
+    border-radius: 0;
+}
+
+.auth_header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.auth_header h2 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1.2rem;
+    font-family: \"Red Hat Display\";
+}
+
+.auth_header p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.auth_form {
+    width: 100%;
+}
+
+.form_group {
+    margin-bottom: 2.4rem;
+}
+
+.form_group label {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0.8rem;
+    font-family: \"Red Hat Display\";
+}
+
+.form_group label em {
+    color: #E30613;
+    font-style: normal;
+}
+
+.form_group input[type=\"text\"],
+.form_group input[type=\"email\"],
+.form_group input[type=\"password\"],
+.form_group input[type=\"tel\"],
+.form_group select {
+    width: 100%;
+    height: 5.6rem;
+    padding: 0 1.6rem;
+    border: 1px solid #D9D9D9;
+    background: #F3F3F3;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #000;
+    font-family: \"Red Hat Display\";
+    transition: border-color 0.3s;
+}
+
+.form_group input:focus,
+.form_group select:focus {
+    border-color: #000;
+    outline: none;
+}
+
+.form_group textarea {
+    width: 100%;
+    min-height: 12rem;
+    padding: 1.6rem;
+    border: 1px solid #D9D9D9;
+    background: #F3F3F3;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #000;
+    font-family: \"Red Hat Display\";
+    resize: vertical;
+}
+
+.form_group textarea:focus {
+    border-color: #000;
+    outline: none;
+}
+
+.form_checkbox {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2.4rem;
+}
+
+.form_checkbox input[type=\"checkbox\"] {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1.2rem;
+    margin-top: 0.3rem;
+    cursor: pointer;
+}
+
+.form_checkbox label {
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.form_checkbox label a {
+    color: #E30613;
+    text-decoration: underline;
+}
+
+.btn_submit {
+    width: 100%;
+    height: 5.6rem;
+    background: #E30613;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: \"Red Hat Display\";
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.btn_submit:hover {
+    background: #c0050f;
+}
+
+.btn_submit:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.auth_footer {
+    text-align: center;
+    margin-top: 2.4rem;
+    padding-top: 2.4rem;
+    border-top: 1px solid #D9D9D9;
+}
+
+.auth_footer p {
+    font-size: 1.6rem;
+    color: #666;
+    margin-bottom: 1.2rem;
+}
+
+.auth_footer a {
+    color: #E30613;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.auth_footer a:hover {
+    text-decoration: underline;
+}
+
+.auth_links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.auth_links a {
+    color: #E30613;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.auth_links a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 3.2rem 0;
+    color: #999;
+    font-size: 1.4rem;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #D9D9D9;
+}
+
+.divider::before {
+    margin-right: 1.6rem;
+}
+
+.divider::after {
+    margin-left: 1.6rem;
+}
+
+/* Cart Badge */
+.btn_cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.btn_cart:hover {
+    color: #E30613;
+}
+
+.btn_cart svg {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.cart_badge {
+    position: absolute;
+    top: -0.8rem;
+    right: -0.8rem;
+    background: #E30613;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.util .login a {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.util .login a:hover {
+    color: #E30613;
+}
+
+/* Checkout specific styles */
+.checkout_section {
+    padding: 12rem 0 8rem;
+    background: #F9F9F9;
+}
+
+.checkout_container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.checkout_grid {
+    display: grid;
+    grid-template-columns: 1fr 40rem;
+    gap: 4rem;
+}
+
+.checkout_main {
+    background: #fff;
+    padding: 4rem;
+    border: 1px solid #D9D9D9;
+}
+
+.checkout_sidebar {
+    background: #fff;
+    padding: 4rem;
+    border: 1px solid #D9D9D9;
+    height: fit-content;
+    position: sticky;
+    top: 12rem;
+}
+
+.section_title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 2.4rem;
+    padding-bottom: 1.6rem;
+    border-bottom: 2px solid #E30613;
+    font-family: \"Red Hat Display\";
+}
+
+.cart_items {
+    margin-bottom: 2.4rem;
+}
+
+.cart_item {
+    display: flex;
+    gap: 1.6rem;
+    padding: 1.6rem 0;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.cart_item:last-child {
+    border-bottom: none;
+}
+
+.cart_item_image {
+    width: 8rem;
+    height: 8rem;
+    background: #F3F3F3;
+    flex-shrink: 0;
+}
+
+.cart_item_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart_item_details {
+    flex: 1;
+}
+
+.cart_item_name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0.4rem;
+}
+
+.cart_item_qty {
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.cart_item_price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+    text-align: right;
+}
+
+.order_summary {
+    margin-top: 2.4rem;
+    padding-top: 2.4rem;
+    border-top: 2px solid #D9D9D9;
+}
+
+.summary_row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+}
+
+.summary_row.total {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    padding-top: 1.6rem;
+    border-top: 1px solid #D9D9D9;
+    margin-top: 1.6rem;
+}
+
+.form_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+}
+
+.upload_area {
+    border: 2px dashed #D9D9D9;
+    background: #F3F3F3;
+    padding: 3.2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.upload_area:hover {
+    border-color: #E30613;
+}
+
+.upload_area input[type=\"file\"] {
+    display: none;
+}
+
+.upload_icon {
+    font-size: 4.8rem;
+    color: #999;
+    margin-bottom: 1.6rem;
+}
+
+.upload_text {
+    font-size: 1.6rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.upload_hint {
+    font-size: 1.4rem;
+    color: #999;
+}
+
+@media (max-width: 1279px) {
+    .checkout_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout_sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 767px) {
+    .auth_box {
+        padding: 3.2rem 2.4rem;
+    }
+
+    .auth_header h2 {
+        font-size: 2.8rem;
+    }
+
+    .checkout_main,
+    .checkout_sidebar {
+        padding: 2.4rem;
+    }
+
+    .form_row {
+        grid-template-columns: 1fr;
+    }
+
+    .auth_links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* =========================================================================
+   Auth Split Layout (used in login.html and register.html)
+   ========================================================================= */
+
+.page-auth-split {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #fff;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.auth_split_container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Left Side: Form Area */
+.auth_split_form_area {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    background: #fff;
+}
+
+.auth_split_form_inner {
+    width: 100%;
+    max-width: 44rem;
+}
+
+.auth_split_form_inner.log_form_wide {
+    max-width: 60rem;
+    /* slightly wider for register */
+}
+
+.auth_split_logo {
+    margin-bottom: 6rem;
+}
+
+.auth_split_header {
+    margin-bottom: 3.2rem;
+}
+
+.auth_split_header h2 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.5px;
+}
+
+.auth_split_header p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Customizing forms inside the split layout */
+.auth_split_form_area .form_group {
+    margin-bottom: 2rem;
+}
+
+.auth_split_form_area .form_group label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.auth_split_form_area .form_group input {
+    height: 5.2rem;
+    border: 1px solid #E5E7EB;
+    background: #fff;
+    border-radius: 8px;
+    /* soft rounded corners */
+}
+
+.auth_split_form_area .form_group input:focus {
+    border-color: #B32D26;
+    /* Sena red */
+    box-shadow: 0 0 0 4px rgba(179, 45, 38, 0.1);
+}
+
+.auth_split_form_area .btn_submit {
+    height: 5.2rem;
+    border-radius: 8px;
+    background: #111827;
+    /* Dark almost black replacing standard #E30613 for modern look */
+    color: #fff;
+    text-transform: none;
+    /* less shouty */
+    font-weight: 600;
+    letter-spacing: normal;
+    font-size: 1.6rem;
+    transition: all 0.2s;
+}
+
+.auth_split_form_area .btn_submit:hover {
+    background: #374151;
+    transform: translateY(-1px);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #9CA3AF;
+    font-size: 1.4rem;
+    margin: 2.4rem 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.btn_social {
+    width: 100%;
+    height: 5.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 1.6rem;
+}
+
+.btn_social:hover {
+    background: #F9FAFB;
+    border-color: #D1D5DB;
+}
+
+.auth_split_footer {
+    margin-top: 3.2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #6B7280;
+}
+
+.auth_split_footer a {
+    color: #111827;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.2s;
+}
+
+.auth_split_footer a:hover {
+    text-decoration-color: #111827;
+}
+
+/* Right Side: Image/Promotional Area */
+.auth_split_image_area {
+    width: 50%;
+    position: relative;
+    background: #000;
+    /* Fallback */
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    /* Align overlay content to bottom */
+}
+
+/* Pseudo background image to simulate the hero image */
+.auth_split_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    /* Temporary motorcycle/tech thematic image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    /* Slight fade so text pops */
+    z-index: 1;
+}
+
+/* Dark gradient overlay for text readability */
+.auth_split_image_area::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+    z-index: 2;
+}
+
+/* Content over the image */
+.auth_split_image_overlay {
+    position: relative;
+    z-index: 3;
+    padding: 6rem;
+    color: #fff;
+    width: 100%;
+    max-width: 60rem;
+}
+
+.auth_split_image_overlay h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+    line-height: 1.2;
+}
+
+.auth_split_image_overlay p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 4rem;
+}
+
+.auth_split_features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: calc(50% - 1rem);
+    /* 2 columns */
+}
+
+.feature svg {
+    color: #60A5FA;
+    /* light blue accent mimicking reference */
+    flex-shrink: 0;
+}
+
+/* Responsive constraints */
+@media (max-width: 1024px) {
+    .auth_split_container {
+        flex-direction: column;
+    }
+
+    .auth_split_form_area {
+        width: 100%;
+        min-height: 100vh;
+        order: 2;
+        /* Put form below image or vice versa, typically form on top for mobile */
+    }
+
+    .auth_split_image_area {
+        display: none;
+        /* Hide image on small screens to save space, or show smaller */
+    }
+}

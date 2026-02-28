@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Daftar akun Sena baru">
+    <link rel="shortcut icon" href="../assets/images/common/favicon.svg">
+    <link rel="icon" href="../assets/images/common/favicon-152.svg" sizes="152x152">
+    <title>Daftar - SENA</title>
+
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/style-dev.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/form.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <script src="../assets/js/jquery.min.js"></script>
+</head>
+
+<body class="page-auth-split">
+    <!-- Auth Split Layout -->
+    <div class="auth_split_container">
+        <!-- Left Side: Form Area -->
+        <div class="auth_split_form_area">
+            <div class="auth_split_form_inner log_form_wide">
+                <!-- Branding or Logo -->
+                <div class="auth_split_logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/common/img_logo_red.svg" alt="SENA" style="height: 32px;">
+                    </a>
+                </div>
+
+                <div class="auth_split_header">
+                    <h2>DAFTAR MENDATAR</h2>
+                    <p>Mulai perjalanan teknologi Anda dengan Sena.</p>
+                </div>
+
+                <form class="auth_form" id="registerForm">
+                    <div class="form_row">
+                        <div class="form_group">
+                            <label for="firstName">Nama Depan <em>*</em></label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Nama depan" required>
+                        </div>
+                        <div class="form_group">
+                            <label for="lastName">Nama Belakang <em>*</em></label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Nama belakang" required>
+                        </div>
+                    </div>
+
+                    <div class="form_group">
+                        <label for="email">Email <em>*</em></label>
+                        <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
+                    </div>
+
+                    <div class="form_group">
+                        <label for="phone">Nomor Telepon <em>*</em></label>
+                        <input type="tel" id="phone" name="phone" placeholder="08xxxxxxxxxx" required>
+                    </div>
+
+                    <div class="form_row">
+                        <div class="form_group">
+                            <label for="password">Password <em>*</em></label>
+                            <input type="password" id="password" name="password" placeholder="Min. 8 karakter" required>
+                        </div>
+                        <div class="form_group">
+                            <label for="confirmPassword">Konfirmasi Password <em>*</em></label>
+                            <input type="password" id="confirmPassword" name="confirmPassword"
+                                placeholder="Ulangi password" required>
+                        </div>
+                    </div>
+
+                    <div class="form_checkbox" style="margin-bottom: 1.2rem;">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            Saya menyetujui <a href="#" target="_blank">Syarat & Ketentuan</a> dan <a href="#"
+                                target="_blank">Kebijakan Privasi</a>
+                        </label>
+                    </div>
+
+                    <div class="form_checkbox">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">
+                            Saya ingin menerima newsletter dari Sena
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn_submit">DAFTAR SEKARANG</button>
+
+                    <div class="divider">atau daftar dengan</div>
+
+                    <button type="button" class="btn_social google">
+                        <svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                            <g transform="matrix(1, 0, 0, 1, 27.009001, -39.238998)">
+                                <path fill="#4285F4"
+                                    d="M -3.264 51.509 C -3.264 50.719 -3.334 49.969 -3.454 49.239 L -14.754 49.239 L -14.754 53.749 L -8.284 53.749 C -8.574 55.229 -9.424 56.479 -10.684 57.329 L -10.684 60.329 L -6.824 60.329 C -4.564 58.239 -3.264 55.159 -3.264 51.509 Z" />
+                                <path fill="#34A853"
+                                    d="M -14.754 63.239 C -11.514 63.239 -8.804 62.159 -6.824 60.329 L -10.684 57.329 C -11.764 58.049 -13.134 58.489 -14.754 58.489 C -17.884 58.489 -20.534 56.379 -21.484 53.529 L -25.464 53.529 L -25.464 56.619 C -23.494 60.539 -19.444 63.239 -14.754 63.239 Z" />
+                                <path fill="#FBBC05"
+                                    d="M -21.484 53.529 C -21.734 52.809 -21.864 52.039 -21.864 51.239 C -21.864 50.439 -21.724 49.669 -21.484 48.949 L -21.484 45.859 L -25.464 45.859 C -26.284 47.479 -26.754 49.299 -26.754 51.239 C -26.754 53.179 -26.284 54.999 -25.464 56.619 L -21.484 53.529 Z" />
+                                <path fill="#EA4335"
+                                    d="M -14.754 43.989 C -12.984 43.989 -11.404 44.599 -10.154 45.789 L -6.734 42.369 C -8.804 40.429 -11.514 39.239 -14.754 39.239 C -19.444 39.239 -23.494 41.939 -25.464 45.859 L -21.484 48.949 C -20.534 46.099 -17.884 43.989 -14.754 43.989 Z" />
+                            </g>
+                        </svg>
+                        Daftar dengan Google
+                    </button>
+                </form>
+
+                <div class="auth_split_footer">
+                    <p>Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Image/Promotional Area -->
+        <div class="auth_split_image_area">
+            <div class="auth_split_image_overlay">
+                <h2>Bergabung Bersama Kami</h2>
+                <p>
+                    Daftar untuk mengakses komunitas global Sena, mendaftarkan produk, dan mendapatkan informasi
+                    dukungan terbaik untuk perjalanan Anda.
+                </p>
+                <!-- Decorative elements mimicking UI features -->
+                <div class="auth_split_features">
+                    <div class="feature">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>Perlindungan Garansi Resmi</span>
+                    </div>
+                    <div class="feature">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>Akses Komunitas Global</span>
+                    </div>
+                </div>
+            </div>
+            <!-- We will use CSS background-image for this area -->
+            <div class="auth_split_bg"></div>
+        </div>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                alert('Password tidak cocok!');
+                return;
+            }
+
+            alert('Registrasi berhasil! (Demo)');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+
+</html>

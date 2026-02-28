@@ -1,0 +1,11 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="60" height="60" rx="30" fill="black"/>
+<path d="M20.5 36H16V18H40V22.5" stroke="white"/>
+<path d="M26 30.5742H38.5354" stroke="white" stroke-width="1.4" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M26 27H32.6831" stroke="white" stroke-width="1.4" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M26 34.5742H31.8462" stroke="white" stroke-width="1.4" stroke-linecap="square" stroke-linejoin="round"/>
+<mask id="path-6-inside-1_2903_71347" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M44 22H20V40H29V45L34.7143 40H44V22Z"/>
+</mask>
+<path d="M20 22V20.6H18.6V22H20ZM44 22H45.4V20.6H44V22ZM20 40H18.6V41.4H20V40ZM29 40H30.4V38.6H29V40ZM29 45H27.6V48.0853L29.9219 46.0536L29 45ZM34.7143 40V38.6H34.1883L33.7924 38.9464L34.7143 40ZM44 40V41.4H45.4V40H44ZM20 23.4H44V20.6H20V23.4ZM21.4 40V22H18.6V40H21.4ZM29 38.6H20V41.4H29V38.6ZM30.4 45V40H27.6V45H30.4ZM33.7924 38.9464L28.0781 43.9464L29.9219 46.0536L35.6362 41.0536L33.7924 38.9464ZM44 38.6H34.7143V41.4H44V38.6ZM42.6 22V40H45.4V22H42.6Z" fill="white" mask="url(#path-6-inside-1_2903_71347)"/>
+</svg>

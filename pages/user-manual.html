@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Download Panduan PDF Produk Sena">
+    <link rel="shortcut icon" href="../assets/images/common/favicon.svg">
+    <link rel="icon" href="../assets/images/common/favicon-152.svg" sizes="152x152">
+    <title>Panduan Pengguna & PDF - SENA</title>
+
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/style-dev.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <script src="../assets/js/jquery.min.js"></script>
+
+    <style>
+        .manual_section {
+            padding: 12rem 2rem 8rem;
+            background: #F9F9F9;
+            min-height: calc(100vh - 200px);
+        }
+
+        .manual_container {
+            max-width: 140rem;
+            margin: 0 auto;
+        }
+
+        .manual_header {
+            text-align: center;
+            margin-bottom: 6rem;
+        }
+
+        .manual_header h2 {
+            font-size: 4rem;
+            margin-bottom: 1.6rem;
+            font-family: "Red Hat Display", sans-serif;
+            text-transform: uppercase;
+        }
+
+        .manual_header p {
+            font-size: 1.8rem;
+            color: #666;
+        }
+
+        /* Tabs */
+        .manual_tabs {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 4.8rem;
+            border-bottom: 1px solid #D9D9D9;
+            padding-bottom: 1.6rem;
+        }
+
+        .manual_tabs button {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #999;
+            text-transform: uppercase;
+            padding: 0.8rem 1.6rem;
+            position: relative;
+        }
+
+        .manual_tabs button.active {
+            color: #000;
+        }
+
+        .manual_tabs button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1.7rem;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #B32D26;
+        }
+
+        /* Grid */
+        .manual_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+            gap: 3.2rem;
+        }
+
+        .manual_card {
+            background: #fff;
+            border: 1px solid #D9D9D9;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .manual_card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .manual_image {
+            padding: 4rem 2rem;
+            background: #F3F3F3;
+            text-align: center;
+            height: 26rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .manual_image img {
+            max-width: 80%;
+            max-height: 100%;
+            mix-blend-mode: darken;
+        }
+
+        .manual_info {
+            padding: 2.4rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .manual_info h3 {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .manual_info p {
+            font-size: 1.4rem;
+            color: #666;
+            flex: 1;
+            margin-bottom: 2.4rem;
+            line-height: 1.5;
+        }
+
+        .download_btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+            width: 100%;
+            padding: 1.4rem;
+            background: #F3F3F3;
+            border: 1px solid #D9D9D9;
+            color: #000;
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .download_btn:hover {
+            background: #000;
+            color: #fff;
+            border-color: #000;
+        }
+
+        /* Fix cart and login alignment in header */
+        .btn_cart {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .btn_login {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .cart_badge {
+            background: #B32D26;
+            color: #fff;
+            font-size: 1rem;
+            padding: 2px 6px;
+            border-radius: 10px;
+            line-height: 1;
+        }
+
+        @media (max-width: 767px) {
+            .manual_header h2 {
+                font-size: 3.2rem;
+            }
+
+            .manual_tabs {
+                overflow-x: auto;
+                justify-content: flex-start;
+            }
+
+            .manual_tabs button {
+                white-space: nowrap;
+            }
+
+            .manual_section {
+                padding-top: 10rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="page-user-manual">
+    <div id="page" class="site">
+        <header id="act_header">
+            <div class="headerArea">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="../index.html">
+                            <img src="../assets/images/common/img_logo_red.svg" alt="SENA">
+                            <img src="../assets/images/common/img_logo_white.svg" alt="SENA">
+                        </a>
+                    </h1>
+                    <div class="nav">
+                        <ul class="navbar">
+                            <li class="gnb-one-depth menu-item"><a href="wave-intercom.html">WAVE INTERCOM</a></li>
+                            <li class="gnb-three-depth menu-item menu-item-has-children"><a href="#">Motorcycling</a>
+                            </li>
+                            <li class="gnb-three-depth menu-item menu-item-has-children"><a href="#">Cycling</a></li>
+                            <li class="gnb-one-depth menu-item"><a href="news.html">Stories</a></li>
+                            <li class="gnb-one-depth menu-item"><a href="collaborations.html">Kolaborasi</a></li>
+                        </ul>
+                    </div>
+                    <ul class="util">
+                        <li class="store">
+                            <a href="https://store-us.sena.com" class="btn_store" target="_blank">
+                                <span class="ico">TOKO</span>
+                            </a>
+                        </li>
+                        <li class="support">
+                            <a href="support.html">DUKUNGAN</a>
+                        </li>
+                        <li class="cart">
+                            <a href="checkout.html" class="btn_cart"
+                                style="display: flex; align-items: center; gap: 6px; color: #000;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9 2L7.17 4H3C2.45 4 2 4.45 2 5C2 5.55 2.45 6 3 6H4.31L6.6 13.59C7.09 15.29 8.67 16.5 10.44 16.5H18.55C20.35 16.5 21.94 15.26 22.41 13.53L23.54 8.93C23.77 8.03 23.12 7.12 22.17 7H6.54L6.42 6.57L5.91 5H19C19.55 5 20 4.55 20 4C20 3.45 19.55 3 19 3H8.29L9 2ZM7 18C5.9 18 5 18.9 5 20C5 21.1 5.9 22 7 22C8.1 22 9 21.1 9 20C9 18.9 8.1 18 7 18ZM17 18C15.9 18 15 18.9 15 20C15 21.1 15.9 22 17 22C18.1 22 19 21.1 19 20C19 18.9 18.1 18 17 18Z"
+                                        fill="currentColor" />
+                                </svg>
+                                <span class="cart_badge"
+                                    style="background: #B32D26; color: #fff; font-size: 1.1rem; padding: 2px 8px; border-radius: 12px; line-height: 1;">0</span>
+                            </a>
+                        </li>
+                        <li class="login" style="margin-left: 1.6rem;">
+                            <a href="login.html" class="btn_login"
+                                style="display: flex; align-items: center; color: #000;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="site-content-container">
+            <section class="manual_section">
+                <div class="manual_container">
+                    <div class="manual_header">
+                        <h2>Panduan Pengguna</h2>
+                        <p>Unduh panduan pengguna, panduan memulai cepat (Quick Start Guide), dan informasi firmware
+                            untuk produk SENA Anda.</p>
+                    </div>
+
+                    <div class="manual_tabs">
+                        <button class="active">Semua Produk</button>
+                        <button>Motorcycling</button>
+                        <button>Cycling</button>
+                        <button>Komunikasi</button>
+                        <button>Kamera</button>
+                    </div>
+
+                    <div class="manual_grid">
+                        <div class="manual_card">
+                            <div class="manual_image">
+                                <!-- Using placeholder from support.html or general img -->
+                                <img src="../assets/images/common/favicon-152.svg" alt="Sena 60S" style="width: 120px;">
+                            </div>
+                            <div class="manual_info">
+                                <h3>Sena 60S</h3>
+                                <p>Sistem Komunikasi Mesh & Bluetooth Premium dengan Sound by Harman Kardon</p>
+                                <a href="#" class="download_btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                                    </svg>
+                                    User's Guide (PDF)
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="manual_card">
+                            <div class="manual_image">
+                                <img src="../assets/images/common/favicon-152.svg" alt="Sena 50S" style="width: 120px;">
+                            </div>
+                            <div class="manual_info">
+                                <h3>Sena 50S</h3>
+                                <p>Sistem Komunikasi Bluetooth Sepeda Motor (Firmware v2.0+)</p>
+                                <a href="#" class="download_btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                                    </svg>
+                                    User's Guide (PDF)
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="manual_card">
+                            <div class="manual_image">
+                                <img src="../assets/images/common/favicon-152.svg" alt="Impulse" style="width: 120px;">
+                            </div>
+                            <div class="manual_info">
+                                <h3>Impulse Helmet</h3>
+                                <p>Helm Cerdas Modular dengan Mesh Intercom dan Sound by Harman Kardon</p>
+                                <a href="#" class="download_btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                                    </svg>
+                                    Quick Start Guide (PDF)
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="manual_card">
+                            <div class="manual_image">
+                                <img src="../assets/images/common/favicon-152.svg" alt="BiKom 20" style="width: 120px;">
+                            </div>
+                            <div class="manual_info">
+                                <h3>BiKom 20</h3>
+                                <p>Sistem Komunikasi Sepeda untuk Grup Kecil dan Keluarga</p>
+                                <a href="#" class="download_btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                                    </svg>
+                                    User's Guide (PDF)
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="manual_card">
+                            <div class="manual_image">
+                                <img src="../assets/images/common/favicon-152.svg" alt="50C" style="width: 120px;">
+                            </div>
+                            <div class="manual_info">
+                                <h3>Sena 50C</h3>
+                                <p>Kamera 4K Terintegrasi dan Sistem Komunikasi Mesh/Bluetooth</p>
+                                <a href="#" class="download_btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                                    </svg>
+                                    Camera Guide (PDF)
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="manual_card">
+                            <div class="manual_image">
+                                <img src="../assets/images/common/favicon-152.svg" alt="Spider ST1"
+                                    style="width: 120px;">
+                            </div>
+                            <div class="manual_info">
+                                <h3>Spider ST1</h3>
+                                <p>Sistem Komunikasi Mesh Khusus Sepeda Motor</p>
+                                <a href="#" class="download_btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                                    </svg>
+                                    User's Guide (PDF)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div class="inner top">
+                <div class="left">
+                    <div class="sns">
+                        <a href="https://twitter.com/senabluetooth" class="twitter" target="_blank">twitter</a>
+                        <a href="https://www.instagram.com/senabluetooth/" class="instagram"
+                            target="_blank">instagram</a>
+                        <a href="https://www.facebook.com/SenaBluetooth" class="facebook" target="_blank">facebook</a>
+                        <a href="https://www.youtube.com/senabluetooth" class="youtube" target="_blank">youtube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="inner bottom">
+                <div class="left">
+                    <p class="copyright">&copy; 2026 Sena Technologies, Inc. Hak cipta dilindungi</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script>
+        // Simple tab switching logic for demo
+        const tabs = document.querySelectorAll('.manual_tabs button');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

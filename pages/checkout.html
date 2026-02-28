@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="id"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Checkout - Selesaikan pesanan Anda">
+    <link rel="shortcut icon" href="../assets/images/common/favicon.svg">
+    <link rel="icon" href="../assets/images/common/favicon-152.svg" sizes="152x152">
+    <title>Checkout - SENA</title>
+
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/style-dev.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/form.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <script src="../assets/js/jquery.min.js"></script>
+</head>
+
+<body class="page-checkout">
+    <div id="page" class="site">
+        <header id="act_header">
+    <div class="headerArea">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/common/img_logo_red.svg" alt="SENA">
+                    <img src="../assets/images/common/img_logo_white.svg" alt="SENA">
+                </a>
+            </h1>
+            <div class="nav">
+                <ul class="navbar">
+                    <li class="gnb-one-depth menu-item"><a href="wave-intercom.html">WAVE INTERCOM</a></li>
+                    <li class="gnb-three-depth menu-item menu-item-has-children"><a href="#">Motorcycling</a></li>
+                    <li class="gnb-three-depth menu-item menu-item-has-children"><a href="#">Cycling</a></li>
+                    <li class="gnb-one-depth menu-item"><a href="news.html">Stories</a></li>
+                    <li class="gnb-one-depth menu-item"><a href="collaborations.html">Kolaborasi</a></li>
+                </ul>
+            </div>
+            <ul class="util">
+                <li class="store">
+                    <a href="https://store-us.sena.com" class="btn_store" target="_blank">
+                        <span class="ico">TOKO</span>
+                    </a>
+                </li>
+                <li class="support">
+                    <a href="support.html">DUKUNGAN</a>
+                </li>
+                <li class="cart">
+                    <a href="checkout.html" class="btn_cart">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 2L7.17 4H3C2.45 4 2 4.45 2 5C2 5.55 2.45 6 3 6H4.31L6.6 13.59C7.09 15.29 8.67 16.5 10.44 16.5H18.55C20.35 16.5 21.94 15.26 22.41 13.53L23.54 8.93C23.77 8.03 23.12 7.12 22.17 7H6.54L6.42 6.57L5.91 5H19C19.55 5 20 4.55 20 4C20 3.45 19.55 3 19 3H8.29L9 2ZM7 18C5.9 18 5 18.9 5 20C5 21.1 5.9 22 7 22C8.1 22 9 21.1 9 20C9 18.9 8.1 18 7 18ZM17 18C15.9 18 15 18.9 15 20C15 21.1 15.9 22 17 22C18.1 22 19 21.1 19 20C19 18.9 18.1 18 17 18Z" fill="currentColor"/>
+                        </svg>
+                        <span class="cart_badge">2</span>
+                    </a>
+                </li>
+                <li class="login">
+                    <a href="login.html" class="btn_login">LOGIN</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+        <div class="site-content-container">
+            <section class="checkout_section">
+                <div class="checkout_container">
+                    <div class="checkout_grid">
+                        <div class="checkout_main">
+                            <h2 class="section_title">INFORMASI PENGIRIMAN</h2>
+                            
+                            <form id="checkoutForm">
+                                <div class="form_row">
+                                    <div class="form_group">
+                                        <label for="firstName">Nama Depan <em>*</em></label>
+                                        <input type="text" id="firstName" name="firstName" required>
+                                    </div>
+                                    <div class="form_group">
+                                        <label for="lastName">Nama Belakang <em>*</em></label>
+                                        <input type="text" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+
+                                <div class="form_group">
+                                    <label for="email">Email <em>*</em></label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+
+                                <div class="form_group">
+                                    <label for="phone">Nomor Telepon <em>*</em></label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+
+                                <div class="form_group">
+                                    <label for="address">Alamat Lengkap <em>*</em></label>
+                                    <textarea id="address" name="address" rows="3" required></textarea>
+                                </div>
+
+                                <div class="form_row">
+                                    <div class="form_group">
+                                        <label for="city">Kota <em>*</em></label>
+                                        <input type="text" id="city" name="city" required>
+                                    </div>
+                                    <div class="form_group">
+                                        <label for="province">Provinsi <em>*</em></label>
+                                        <select id="province" name="province" required>
+                                            <option value="">Pilih Provinsi</option>
+                                            <option value="jakarta">DKI Jakarta</option>
+                                            <option value="jabar">Jawa Barat</option>
+                                            <option value="jateng">Jawa Tengah</option>
+                                            <option value="jatim">Jawa Timur</option>
+                                            <option value="bali">Bali</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form_row">
+                                    <div class="form_group">
+                                        <label for="postalCode">Kode Pos <em>*</em></label>
+                                        <input type="text" id="postalCode" name="postalCode" required>
+                                    </div>
+                                    <div class="form_group">
+                                        <label for="country">Negara <em>*</em></label>
+                                        <input type="text" id="country" name="country" value="Indonesia" readonly>
+                                    </div>
+                                </div>
+
+                                <h2 class="section_title" style="margin-top: 4rem;">METODE PEMBAYARAN</h2>
+
+                                <div class="form_group">
+                                    <label>
+                                        <input type="radio" name="payment" value="transfer" checked>
+                                        Transfer Bank
+                                    </label>
+                                    <label style="margin-top: 1.2rem;">
+                                        <input type="radio" name="payment" value="cod">
+                                        COD (Cash on Delivery)
+                                    </label>
+                                    <label style="margin-top: 1.2rem;">
+                                        <input type="radio" name="payment" value="credit">
+                                        Kartu Kredit/Debit
+                                    </label>
+                                </div>
+
+                                <div class="form_group" style="margin-top: 2.4rem;">
+                                    <label for="notes">Catatan Pesanan (Opsional)</label>
+                                    <textarea id="notes" name="notes" rows="3" placeholder="Catatan khusus untuk pesanan Anda"></textarea>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="checkout_sidebar">
+                            <h2 class="section_title">RINGKASAN PESANAN</h2>
+                            
+                            <div class="cart_items">
+                                <div class="cart_item">
+                                    <div class="cart_item_image">
+                                        <img src="../uploads/2026/01/p01_02_01029_d-1.jpg" alt="60S">
+                                    </div>
+                                    <div class="cart_item_details">
+                                        <div class="cart_item_name">Sena 60S</div>
+                                        <div class="cart_item_qty">Qty: 1</div>
+                                    </div>
+                                    <div class="cart_item_price">Rp 4.500.000</div>
+                                </div>
+
+                                <div class="cart_item">
+                                    <div class="cart_item_image">
+                                        <img src="../uploads/2025/02/Main4_product2_bikom-20-2.jpg" alt="BiKom 20">
+                                    </div>
+                                    <div class="cart_item_details">
+                                        <div class="cart_item_name">BiKom 20</div>
+                                        <div class="cart_item_qty">Qty: 1</div>
+                                    </div>
+                                    <div class="cart_item_price">Rp 2.800.000</div>
+                                </div>
+                            </div>
+
+                            <div class="order_summary">
+                                <div class="summary_row">
+                                    <span>Subtotal</span>
+                                    <span>Rp 7.300.000</span>
+                                </div>
+                                <div class="summary_row">
+                                    <span>Ongkos Kirim</span>
+                                    <span>Rp 50.000</span>
+                                </div>
+                                <div class="summary_row">
+                                    <span>Pajak (11%)</span>
+                                    <span>Rp 803.000</span>
+                                </div>
+                                <div class="summary_row total">
+                                    <span>Total</span>
+                                    <span>Rp 8.153.000</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" form="checkoutForm" class="btn_submit" style="margin-top: 2.4rem;">
+                                SELESAIKAN PESANAN
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+    <div class="inner top">
+        <div class="left">
+            <div class="sns">
+                <a href="https://twitter.com/senabluetooth" class="twitter" target="_blank">twitter</a>
+                <a href="https://www.instagram.com/senabluetooth/" class="instagram" target="_blank">instagram</a>
+                <a href="https://www.facebook.com/SenaBluetooth" class="facebook" target="_blank">facebook</a>
+                <a href="https://www.youtube.com/senabluetooth" class="youtube" target="_blank">youtube</a>
+            </div>
+        </div>
+    </div>
+    <div class="inner bottom">
+        <div class="left">
+            <p class="copyright">&copy; 2026 Sena Technologies, Inc. Hak cipta dilindungi</p>
+        </div>
+    </div>
+</footer>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script>
+        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Terima kasih! Pesanan Anda sedang diproses. (Demo)');
+        });
+    </script>
+</body>
+</html>

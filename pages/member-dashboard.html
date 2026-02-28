@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Member Dashboard - SENA">
+    <link rel="shortcut icon" href="../assets/images/common/favicon.svg">
+    <link rel="icon" href="../assets/images/common/favicon-152.svg" sizes="152x152">
+    <title>Dashboard - Member Area | SENA</title>
+
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/style-dev.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/form.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/member.css">
+    <script src="../assets/js/jquery.min.js"></script>
+</head>
+
+<body class="page-member-area">
+    <div id="page" class="site">
+        <header id="act_header">
+            <div class="headerArea">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="../index.html">
+                            <img src="../assets/images/common/img_logo_red.svg" alt="SENA">
+                            <img src="../assets/images/common/img_logo_white.svg" alt="SENA">
+                        </a>
+                    </h1>
+                    <div class="nav">
+                        <ul class="navbar">
+                            <li class="gnb-one-depth menu-item"><a href="wave-intercom.html">WAVE INTERCOM</a></li>
+                            <li class="gnb-three-depth menu-item menu-item-has-children"><a href="#">Motorcycling</a>
+                            </li>
+                            <li class="gnb-three-depth menu-item menu-item-has-children"><a href="#">Cycling</a></li>
+                            <li class="gnb-one-depth menu-item"><a href="news.html">Stories</a></li>
+                            <li class="gnb-one-depth menu-item"><a href="collaborations.html">Kolaborasi</a></li>
+                        </ul>
+                    </div>
+                    <ul class="util">
+                        <li class="store">
+                            <a href="https://store-us.sena.com" class="btn_store" target="_blank">
+                                <span class="ico">TOKO</span>
+                            </a>
+                        </li>
+                        <li class="support">
+                            <a href="support.html">DUKUNGAN</a>
+                        </li>
+                        <li class="cart">
+                            <a href="checkout.html" class="btn_cart"
+                                style="display: flex; align-items: center; gap: 6px; color: #000;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9 2L7.17 4H3C2.45 4 2 4.45 2 5C2 5.55 2.45 6 3 6H4.31L6.6 13.59C7.09 15.29 8.67 16.5 10.44 16.5H18.55C20.35 16.5 21.94 15.26 22.41 13.53L23.54 8.93C23.77 8.03 23.12 7.12 22.17 7H6.54L6.42 6.57L5.91 5H19C19.55 5 20 4.55 20 4C20 3.45 19.55 3 19 3H8.29L9 2ZM7 18C5.9 18 5 18.9 5 20C5 21.1 5.9 22 7 22C8.1 22 9 21.1 9 20C9 18.9 8.1 18 7 18ZM17 18C15.9 18 15 18.9 15 20C15 21.1 15.9 22 17 22C18.1 22 19 21.1 19 20C19 18.9 18.1 18 17 18Z"
+                                        fill="currentColor" />
+                                </svg>
+                                <span class="cart_badge"
+                                    style="background: #B32D26; color: #fff; font-size: 1.1rem; padding: 2px 8px; border-radius: 12px; line-height: 1;">2</span>
+                            </a>
+                        </li>
+                        <li class="user_dropdown" style="margin-left: 1.6rem;">
+                            <div class="user_dropdown_toggle">
+                                <div class="user_avatar_small">JD</div>
+                                <span style="font-size: 1.4rem; font-weight: 600;">John Doe</span>
+                            </div>
+                            <div class="user_dropdown_menu">
+                                <a href="member-dashboard.html">Dashboard</a>
+                                <a href="member-orders.html">Pesanan Saya</a>
+                                <a href="member-profile.html">Profil</a>
+                                <a href="login.html">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="site-content-container">
+            <section class="member_area">
+                <div class="member_container">
+                    <div class="member_grid">
+                        <!-- Sidebar -->
+                        <aside class="member_sidebar">
+                            <div class="member_profile">
+                                <div class="member_avatar">JD</div>
+                                <div class="member_name">John Doe</div>
+                                <div class="member_email">john.doe@email.com</div>
+                            </div>
+                            <nav class="member_nav">
+                                <a href="member-dashboard.html" class="member_nav_item active">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" />
+                                    </svg>
+                                    Dashboard
+                                </a>
+                                <a href="member-orders.html" class="member_nav_item">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7h-4v2h4v-2zm4-4H6v2h12V8z" />
+                                    </svg>
+                                    Pesanan Saya
+                                </a>
+                                <a href="member-profile.html" class="member_nav_item">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                    </svg>
+                                    Profil Saya
+                                </a>
+                                <a href="member-addresses.html" class="member_nav_item">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                    </svg>
+                                    Alamat
+                                </a>
+                                <a href="member-warranty.html" class="member_nav_item">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
+                                    </svg>
+                                    Klaim Garansi
+                                </a>
+                                <a href="member-wishlist.html" class="member_nav_item">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    Wishlist
+                                </a>
+                                <a href="login.html" class="member_nav_item logout">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" />
+                                    </svg>
+                                    Logout
+                                </a>
+                            </nav>
+                        </aside>
+
+                        <!-- Main Content -->
+                        <main class="member_content">
+                            <div class="member_header">
+                                <h2>Dashboard</h2>
+                                <p>Selamat datang kembali, John! Lihat ringkasan akun Anda di bawah ini.</p>
+                            </div>
+
+                            <!-- Stats Cards -->
+                            <div class="dashboard_stats">
+                                <div class="stat_card primary">
+                                    <div class="stat_icon">📦</div>
+                                    <div class="stat_value">12</div>
+                                    <div class="stat_label">Total Pesanan</div>
+                                </div>
+                                <div class="stat_card">
+                                    <div class="stat_icon">🚚</div>
+                                    <div class="stat_value">2</div>
+                                    <div class="stat_label">Sedang Dikirim</div>
+                                </div>
+                                <div class="stat_card">
+                                    <div class="stat_icon">🛡️</div>
+                                    <div class="stat_value">1</div>
+                                    <div class="stat_label">Klaim Garansi</div>
+                                </div>
+                                <div class="stat_card">
+                                    <div class="stat_icon">❤️</div>
+                                    <div class="stat_value">5</div>
+                                    <div class="stat_label">Wishlist</div>
+                                </div>
+                            </div>
+
+                            <!-- Recent Orders -->
+                            <div>
+                                <h3 style="font-size: 2.4rem; font-weight: 700; margin-bottom: 1.6rem;">Pesanan Terakhir
+                                </h3>
+                                <table class="orders_table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID Pesanan</th>
+                                            <th>Tanggal</th>
+                                            <th>Produk</th>
+                                            <th>Total</th>
+                                            <th>Status</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="order_id">#ORD-2024-001</td>
+                                            <td>20 Feb 2024</td>
+                                            <td>Sena 60S</td>
+                                            <td>Rp 4.500.000</td>
+                                            <td><span class="order_status shipped">Dikirim</span></td>
+                                            <td><a href="#" class="btn_view">Lihat</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="order_id">#ORD-2024-002</td>
+                                            <td>18 Feb 2024</td>
+                                            <td>BiKom 20</td>
+                                            <td>Rp 2.800.000</td>
+                                            <td><span class="order_status processing">Diproses</span></td>
+                                            <td><a href="#" class="btn_view">Lihat</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="order_id">#ORD-2024-003</td>
+                                            <td>15 Feb 2024</td>
+                                            <td>Phantom Helmet</td>
+                                            <td>Rp 5.200.000</td>
+                                            <td><span class="order_status completed">Selesai</span></td>
+                                            <td><a href="#" class="btn_view">Lihat</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div class="inner top">
+                <div class="left">
+                    <div class="sns">
+                        <a href="https://twitter.com/senabluetooth" class="twitter" target="_blank">twitter</a>
+                        <a href="https://www.instagram.com/senabluetooth/" class="instagram"
+                            target="_blank">instagram</a>
+                        <a href="https://www.facebook.com/SenaBluetooth" class="facebook" target="_blank">facebook</a>
+                        <a href="https://www.youtube.com/senabluetooth" class="youtube" target="_blank">youtube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="inner bottom">
+                <div class="left">
+                    <p class="copyright">&copy; 2026 Sena Technologies, Inc. Hak cipta dilindungi</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+
+</html>
